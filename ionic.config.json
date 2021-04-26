@@ -1,0 +1,7 @@
+{
+  "name": "ezbns",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
