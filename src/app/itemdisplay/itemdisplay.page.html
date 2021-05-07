@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="turqoise">
+    <ion-title>Item Name</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  padding class="background" color="grey">
+
+  <ion-slides class="picturescroll" [scrollbar]="true">
+    <ion-slide>
+      slide
+    </ion-slide>
+    <ion-slide>
+      slide
+    </ion-slide>
+    <ion-slide>
+      slide
+    </ion-slide>
+    <ion-slide>
+      slide
+    </ion-slide>
+  </ion-slides>
+
+
+  <ion-grid>
+    <ion-row class="iteminfo1">
+      <ion-col class="price">
+        RM100
+      </ion-col>
+      <ion-col class="cond">
+        Condition
+        <ion-button class="rightbutton" fill="clear">
+          <ion-icon name="heart" class="iconstyle"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="iteminfo2">
+      <ion-col class="details1">
+        <ion-icon name="location-outline"></ion-icon>
+        Location
+      </ion-col>
+    </ion-row>
+    <ion-row class="iteminfo2">
+      <ion-col class="details2">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        Information of item displayed
+      </ion-col>
+    </ion-row>
+    <ion-row class="iteminfo1">
+      <ion-button class="profilebutton" fill="clear">
+        <ion-icon name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

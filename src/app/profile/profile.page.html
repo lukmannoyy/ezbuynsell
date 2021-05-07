@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="turqoise">
+
+    <ion-buttons slot="start">
+      <ion-back-button>back</ion-back-button>
+    </ion-buttons>
+
+    <ion-title>My Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background" color="grey">
+
+  <ion-grid class="profiletab"> <br>
+    <ion-row>
+      <ion-col size="3">
+        <ion-icon name="person-circle" class="profilepic"></ion-icon>
+      </ion-col>
+      <ion-col class="info1">
+        <ion-row>
+          <ion-icon name="at-circle"></ion-icon>
+          <ion-text class="infotext1" >{{username}}</ion-text>
+
+        </ion-row>
+        <ion-row>
+          <ion-icon name="id-card"></ion-icon>
+          <ion-text class="infotext2">{{matricno}}</ion-text>
+        </ion-row>
+        <ion-row>
+          <ion-icon name="call"></ion-icon>
+          <ion-text class="infotext2">{{phone}}</ion-text>
+        </ion-row>
+        <ion-row>
+          <ion-icon name="mail"></ion-icon>
+          <ion-text class="infotext2">{{userEmail}}</ion-text>
+        </ion-row>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card *ngFor="let item of itemLists" [button]="true" (click)="itemdisplay()">
+    <ion-grid class="grid">
+  <ion-row >
+    <img class="bigrow" src="assets/icon/Logo.jpeg" width="80" height="90"/>
+
+    <ion-col class="col1" fixed>
+      <div class="text2">{{item.Item}}</div>
+      <div class="text1">RM{{item.Price}}</div>
+      <div class="text2">{{item.Condition}}</div>
+      <div class="text4">{{item.Description}}</div>
+
+    </ion-col>
+  </ion-row>
+
+
+</ion-grid>
+</ion-card>
+</ion-content>
+
+<ion-footer (click)="logout()">
+  <ion-toolbar color="danger">
+    <ion-title>Log out</ion-title>
+  </ion-toolbar>
+</ion-footer>

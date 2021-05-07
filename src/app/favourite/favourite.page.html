@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="turqoise">
+    <ion-title>Favourited Items</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background" color="grey">
+  <ion-card *ngFor="let item of favLists" [button]="true" (click)="itemdisplay()">
+    <ion-grid class="grid">
+  <ion-row >
+    <img class="bigrow" src="assets/icon/Logo.jpeg" width="80" height="90"/>
+
+    <ion-col class="col1" fixed>
+      <div class="text2">{{item.Item}}</div>
+      <div class="text1">RM{{item.Price}}</div>
+      <div class="text2">{{item.Condition}}</div>
+      <div class="text3">{{item.Description}}</div>
+
+    </ion-col>
+
+    <ion-col class="col2">
+      <ion-row>
+        <div>
+          <ion-button class="rightbutton" fill="clear">
+            <ion-icon name="person-circle"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-row>
+      <ion-row>
+        <div>
+          <ion-button class="rightbutton" fill="clear">
+            <ion-icon name="heart" class="iconstyle"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-row>
+
+    </ion-col>
+  </ion-row>
+
+
+</ion-grid>
+</ion-card>
+
+</ion-content>

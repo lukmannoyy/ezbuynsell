@@ -1,0 +1,110 @@
+<ion-header >
+  <ion-toolbar color="turqoise">
+    <ion-title>
+      Sell Item
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>
+
+      </ion-back-button>
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <form [formGroup]="itemForm" (ngSubmit)="CreateItemRecord()">
+
+    <ion-item>
+      <ion-label position="floating">Item</ion-label>
+      <ion-input formControlName="Item"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Price</ion-label>
+      <ion-input formControlName="Price"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Condition</ion-label>
+      <ion-input formControlName="Condition"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-input formControlName="Description"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-button (click)="CreateItemRecord()" [disabled]="itemForm.invalid">
+        <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
+        &nbsp;Sell Item
+      </ion-button>
+    </ion-item>
+
+  </form>
+
+<!--
+  <ion-card *ngFor="let item of itemLists" color="primary">
+    <span *ngIf="!item.isEdit; else elseBlock">
+      <ion-card-header>
+        <ion-card-title>{{item.Item}}  ({{item.Condition}})</ion-card-title>
+        <ion-card-title>RM {{item.Price}}</ion-card-title>
+        <ion-card-subtitle>{{item.Description}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-button shape="round" color="secondary" size="small" (click)="EditItemRecord(item)">
+          <ion-icon size="small" slot="icon-only" name="create"></ion-icon>
+
+        </ion-button>
+        <ion-button shape="round" color="danger" size="small" (click)="RemoveItemRecord(item.id)">
+          <ion-icon size="small" slot="icon-only" name="trash"></ion-icon>
+
+        </ion-button>
+      </ion-card-content>
+    </span>
+    <ng-template #elseBlock>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                Edit
+              </ion-col>
+              <ion-col>
+                <ion-button fill="solid" color="medium" size="small" (click)="item.isEdit = false">
+                  Cancel
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button fill="solid" color="success" size="small" (click)="UpdateItemRecord(item)">
+                  Update
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label><strong>Item</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditItem"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label><strong>Condition</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditCondition"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label><strong>Description</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditDescription"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ng-template>
+  </ion-card>
+-->
+
+
+</ion-content>

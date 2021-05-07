@@ -1,0 +1,54 @@
+
+ <ion-header >
+  <ion-toolbar color="turqoise">
+    <ion-title>Homepage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background" color="grey">
+
+
+  <ion-content [fullscreen]="true">
+    <ion-searchbar
+      showcancelbutton=""
+      (ionInput)="filterList($event) " color="turqoise">
+      <ion-icon name="funnel" color="black"></ion-icon>
+  </ion-searchbar>
+
+
+<!--
+    <ion-list lines="none">
+      <ion-item *ngFor="let Item of itemList">
+        <ion-label class="ion-text-wrap">
+          <ion-text color="primary">
+            <h3>{{ Item.name }}</h3>
+          </ion-text>
+          <p>Condition : {{ Item.condition }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+-->
+
+
+  <ion-button color="gold" expand="block" size="large"  (click)="favourite()">
+    <ion-icon name="heart" slot="end" class="iconstyle"></ion-icon>
+    <ion-label class="feedcardtext" >Favorited Items</ion-label>
+  </ion-button>
+
+  <ion-button  expand="block" color="gold"  size="large" (click)="sell()">
+    <ion-icon name="pricetag" slot="end" class="iconstyle"></ion-icon>
+    <ion-label class="feedcardtext" >Sell Items</ion-label>
+  </ion-button>
+
+  <ion-button  expand="block" color="gold"  size="large" (click)="allItem()">
+    <ion-icon name="pricetag" slot="end" class="iconstyle"></ion-icon>
+    <ion-label class="feedcardtext" >All Items</ion-label>
+  </ion-button>
+
+
+
+</ion-content>
+
+
+
